@@ -29,10 +29,9 @@
                 <a href="#proceso" class="hover:text-orange-600 transition">¿Cómo funciona?</a>
                 <a href="#beneficios" class="hover:text-orange-600 transition">Seguridad</a>
                 <a href="#testimonios" class="hover:text-orange-600 transition">Testimonios</a>
-                <a href="#ubicacion" class="hover:text-orange-600 transition">Ubicación</a>
             </div>
             <div>
-                <a href="https://wa.me/573163582022?text=Hola,%20deseo%20agendar%20una%20cita%20en%20la%20oficina%20de%20Plaza%20Caicedo." target="_blank" class="bg-blue-950 hover:bg-blue-900 text-white font-semibold px-5 py-2.5 rounded-xl shadow-lg transition text-sm">
+                <a href="#formulario-cita" class="bg-blue-950 hover:bg-blue-900 text-white font-semibold px-5 py-2.5 rounded-xl shadow-lg transition text-sm">
                     Agendar Cita
                 </a>
             </div>
@@ -40,10 +39,13 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative pt-16 pb-24 overflow-hidden bg-gradient-to-b from-blue-950 via-blue-900 to-blue-950 text-white">
+    <section class="relative pt-12 pb-20 overflow-hidden bg-gradient-to-b from-blue-950 via-blue-900 to-blue-950 text-white">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Columna Izquierda: Texto + Reel -->
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
                     <span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-semibold bg-orange-500/20 text-orange-300 border border-orange-500/30">
                         ✨ Soluciones financieras ágiles y transparentes
@@ -52,28 +54,26 @@
                         Tu crédito aprobado y entregado <span class="text-orange-400">en minutos</span> en Cali
                     </h1>
                     <p class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0">
-                        Infórmate por aquí sobre libranzas, compras de cartera, libre inversión y más. Cierra tu proceso de forma segura en nuestra oficina del <strong>Edificio Plaza de Caicedo</strong> y llévate el desembolso al instante.
+                        Cierra tu proceso de forma segura en nuestra oficina del <strong>Edificio Plaza de Caicedo</strong> y llévate el desembolso al instante.
                     </p>
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-                        <a href="#contacto" class="w-full sm:w-auto bg-orange-600 hover:bg-orange-500 text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-orange-600/20 text-center transition transform hover:-translate-y-0.5">
-                            📅 Reservar Cita en Oficina
-                        </a>
-                        <a href="https://wa.me/573163582022?text=Hola,%20quiero%20recibir%20información%20sobre%20sus%20créditos." target="_blank" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl border border-white/20 text-center transition">
-                            💬 Hablar con un Asesor
-                        </a>
-                    </div>
-                    <div class="flex items-center justify-center lg:justify-start space-x-6 pt-4 text-xs text-slate-400">
-                        <div class="flex items-center gap-1">✅ Sin cobros previos</div>
-                        <div class="flex items-center gap-1">✅ Oficina 608 - Ed. Plaza de Caicedo</div>
-                        <div class="flex items-center gap-1">✅ Desembolso rápido</div>
+
+                    <!-- REEL DESTACADO -->
+                    <div class="relative w-full max-w-[280px] mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-2xl shadow-orange-600/30 border border-white/20 mt-6 bg-blue-950">
+                        <div class="absolute top-3 left-0 right-0 flex justify-center z-10">
+                            <span class="bg-orange-600 text-white text-[11px] uppercase tracking-wider font-bold px-4 py-1.5 rounded-full shadow-lg">
+                                📍 Así es el proceso en nuestra oficina
+                            </span>
+                        </div>
+                        <!-- Carga el archivo del reel -->
+                        <video src="reel%20ope.mp4" autoplay loop muted playsinline controls class="w-full h-auto object-cover aspect-[9/16]"></video>
                     </div>
                 </div>
 
-                <!-- Card Form / Agenda Anti-Cruce Box -->
-                <div class="lg:col-span-5">
+                <!-- Columna Derecha: Card Form / Agenda Anti-Cruce -->
+                <div id="formulario-cita" class="lg:col-span-5">
                     <div class="bg-white text-slate-900 p-8 rounded-3xl shadow-2xl border border-slate-100">
                         <h3 class="text-2xl font-bold text-slate-900 mb-2">Aparta tu Cita</h3>
-                        <p class="text-sm text-slate-600 mb-6">Selecciona el servicio, fecha y hora exacta para asegurar tu atención en oficina sin esperas.</p>
+                        <p class="text-sm text-slate-600 mb-6">Selecciona el servicio, fecha y hora exacta para asegurar tu atención en oficina sin esperas ni cruces.</p>
                         
                         <form id="citaForm" class="space-y-4" onsubmit="enviarCitaWhatsApp(event)">
                             <div>
@@ -138,7 +138,8 @@
                 <p class="text-slate-600 mt-2">Infórmate digitalmente y acércate a nuestra oficina para hacer efectivo tu trámite con rapidez.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Se mantienen las tarjetas de servicios -->
                 <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-orange-500/50 transition">
                     <div class="w-12 h-12 bg-blue-950 text-white rounded-2xl flex items-center justify-center font-bold text-lg mb-6">📄</div>
                     <h4 class="text-xl font-bold text-slate-900 mb-2">Créditos de Libranza</h4>
@@ -173,51 +174,67 @@
         </div>
     </section>
 
-    <!-- How it Works (El Proceso) -->
+    <!-- How it Works (El Proceso) con Imagen -->
     <section id="proceso" class="py-20 bg-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs font-bold tracking-widest uppercase text-orange-600 mb-2">Proceso Transparente</h2>
-                <h3 class="text-3xl font-extrabold text-slate-900">¿Cómo obtienes tu crédito en 3 pasos?</h3>
-                <p class="text-slate-600 mt-2">La asesoría previa es digital, pero el cierre y la entrega del dinero son presenciales y seguros.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-3xl border border-slate-200">
-                    <div class="w-12 h-12 bg-blue-950 text-white rounded-2xl flex items-center justify-center font-bold text-lg mb-6">1</div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-3">Infórmate y Selecciona</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">Revisa nuestros servicios y elige la fecha y hora de tu preferencia en el formulario.</p>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-xs font-bold tracking-widest uppercase text-orange-600">Proceso Transparente</h2>
+                    <h3 class="text-3xl font-extrabold text-slate-900">¿Cómo obtienes tu crédito en 3 pasos?</h3>
+                    <p class="text-slate-600">La asesoría previa es digital, pero el cierre y la entrega del dinero son presenciales y seguros.</p>
+                    
+                    <div class="space-y-4 mt-6">
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 flex items-start gap-4">
+                            <div class="w-10 h-10 min-w-[40px] bg-blue-950 text-white rounded-xl flex items-center justify-center font-bold">1</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Infórmate y Selecciona</h4>
+                                <p class="text-slate-600 text-sm">Elige la fecha y hora de tu preferencia en nuestro formulario.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 flex items-start gap-4">
+                            <div class="w-10 h-10 min-w-[40px] bg-blue-950 text-white rounded-xl flex items-center justify-center font-bold">2</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Visítanos en la Oficina</h4>
+                                <p class="text-slate-600 text-sm">Te esperamos en la Cr 4 #10-44, Oficina 608, Edificio Plaza de Caicedo.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 flex items-start gap-4">
+                            <div class="w-10 h-10 min-w-[40px] bg-orange-600 text-white rounded-xl flex items-center justify-center font-bold">3</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Desembolso en Minutos</h4>
+                                <p class="text-slate-600 text-sm">Verificamos tus documentos y te entregamos tu dinero en el acto.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-8 rounded-3xl border border-slate-200">
-                    <div class="w-12 h-12 bg-blue-950 text-white rounded-2xl flex items-center justify-center font-bold text-lg mb-6">2</div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-3">Visítanos en la Oficina</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">Te esperamos en la <strong>Cr 4 #10-44, Oficina 608, Edificio Plaza de Caicedo</strong>.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl border border-slate-200">
-                    <div class="w-12 h-12 bg-orange-600 text-white rounded-2xl flex items-center justify-center font-bold text-lg mb-6">3</div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-3">Desembolso en Minutos</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">Verificamos tus documentos y te entregamos tu dinero en el acto.</p>
+                <div class="relative">
+                    <!-- Uso de la primera imagen -->
+                    <img src="opecredit.jpeg" alt="Proceso Opecredit" class="rounded-3xl shadow-2xl object-cover w-full h-[500px]">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Trust / Security Section -->
+    <!-- Trust / Security Section con Imagen -->
     <section id="beneficios" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
+                <div class="relative order-2 lg:order-1">
+                    <!-- Uso de la segunda imagen -->
+                    <img src="opecredit2.jpeg" alt="Seguridad y Confianza" class="rounded-3xl shadow-2xl object-cover w-full h-[450px]">
+                </div>
+                <div class="space-y-6 order-1 lg:order-2">
                     <h2 class="text-xs font-bold tracking-widest uppercase text-orange-600">Empresa Confiable y Seria</h2>
                     <h3 class="text-3xl font-extrabold text-slate-900">¿Por qué preferimos cerrar el proceso en oficina?</h3>
                     <p class="text-slate-600 leading-relaxed">
-                        Sabemos que en internet abundan las estafas. Por eso en <strong>Opecredit S.A.S.</strong> apostamos por la seguridad cara a cara. Al visitarnos en nuestra oficina de la Plaza Caicedo, tienes la tranquilidad de tratar con profesionales reales y recibir tu dinero al instante, sin pagos anticipados extraños.
+                        Sabemos que en internet abundan las estafas. Por eso en <strong>Opecredit S.A.S.</strong> apostamos por la seguridad cara a cara. Al visitarnos en nuestra oficina de la Plaza Caicedo, tienes la tranquilidad de tratar con profesionales reales y recibir tu dinero al instante.
                     </p>
                     <div class="space-y-4">
                         <div class="flex items-start gap-3">
                             <div class="w-6 h-6 rounded-full bg-orange-500/20 text-orange-600 flex items-center justify-center font-bold text-xs mt-1">✓</div>
                             <div>
                                 <h5 class="font-bold text-slate-900">Oficina física central</h5>
-                                <p class="text-sm text-slate-600">Cr 4 #10-44 Oficina 608, Edificio Plaza de Caicedo, Cali.</p>
+                                <p class="text-sm text-slate-600">Cr 4 #10-44 Oficina 608, Edificio Plaza de Caicedo.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
@@ -229,18 +246,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-blue-950 text-white p-8 sm:p-10 rounded-3xl shadow-xl relative overflow-hidden">
-                    <h3 class="text-2xl font-bold mb-4">¿Listo para resolver tu necesidad financiera?</h3>
-                    <p class="text-slate-300 text-sm mb-8">Separa tu espacio hoy mismo y ven a nuestra oficina en Cali.</p>
-                    <a href="#contacto" class="block w-full bg-orange-600 hover:bg-orange-500 text-white font-bold py-4 rounded-xl text-center transition shadow-lg">
-                        Agendar Mi Visita a Plaza Caicedo
-                    </a>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- Testimonials (Con Video) -->
     <section id="testimonios" class="py-20 bg-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -249,21 +259,28 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-3xl border border-slate-200 flex flex-col justify-between">
-                    <p class="text-slate-600 text-sm italic mb-6">"Me ayudaron con una compra de cartera excelente. Fui a la oficina 608 en el Edificio Plaza de Caicedo y todo fue muy rápido y transparente."</p>
+                <!-- Testimonio Texto -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 flex flex-col justify-between shadow-sm">
+                    <p class="text-slate-600 text-sm italic mb-6">"Me ayudaron con una compra de cartera excelente. Fui a la oficina 608 en el Edificio Plaza de Caicedo y todo fue muy rápido."</p>
                     <div>
                         <h5 class="font-bold text-slate-900 text-sm">Marcela G.</h5>
                         <span class="text-xs text-orange-600 font-semibold">Cali</span>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-3xl border border-slate-200 flex flex-col justify-between">
-                    <p class="text-slate-600 text-sm italic mb-6">"Excelente atención para libranza. Saber que tienen una oficina física real en el centro de Cali me dio toda la confianza."</p>
-                    <div>
-                        <h5 class="font-bold text-slate-900 text-sm">Héctor R.</h5>
-                        <span class="text-xs text-orange-600 font-semibold">Pensionado</span>
+
+                <!-- Testimonio Video -->
+                <div class="bg-white p-4 rounded-3xl border border-slate-200 flex flex-col items-center shadow-lg transform scale-105 z-10 relative">
+                    <div class="absolute -top-3 right-4 bg-orange-600 text-white text-[10px] font-bold px-2 py-1 rounded-md">CASO REAL</div>
+                    <!-- Carga el archivo de testimonio -->
+                    <video src="testimonio%20opecredit.mp4" controls playsinline class="w-full rounded-2xl h-[220px] object-cover bg-slate-100"></video>
+                    <div class="w-full text-left mt-4 px-2">
+                        <h5 class="font-bold text-slate-900 text-sm">Cliente Satisfecho</h5>
+                        <span class="text-xs text-orange-600 font-semibold">Desembolso en Oficina</span>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-3xl border border-slate-200 flex flex-col justify-between">
+
+                <!-- Testimonio Texto -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 flex flex-col justify-between shadow-sm">
                     <p class="text-slate-600 text-sm italic mb-6">"Rápido y sin rodeos. Pregunté por libre inversión y el desembolso se hizo directamente en la oficina tal como lo prometen."</p>
                     <div>
                         <h5 class="font-bold text-slate-900 text-sm">Sandra M.</h5>
@@ -274,41 +291,57 @@
         </div>
     </section>
 
-    <!-- Location Section -->
+    <!-- Location Section con Imagen -->
     <section id="ubicacion" class="py-20 bg-white border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-xs font-bold tracking-widest uppercase text-orange-600 mb-2">Ubicación Estratégica</h2>
-            <h3 class="text-3xl font-extrabold text-slate-900 mb-6">Te esperamos en el corazón de Cali</h3>
-            <p class="text-slate-600 max-w-xl mx-auto mb-8 text-sm">
-                Nuestra oficina principal está ubicada en pleno centro histórico, ofreciéndote un punto seguro y de fácil acceso.
-            </p>
-            <div class="inline-flex flex-col sm:flex-row items-center gap-6 bg-slate-50 px-8 py-6 rounded-2xl shadow-sm border border-slate-200 text-left">
-                <div>
-                    <p class="text-xs font-bold uppercase text-slate-400">Dirección Exacta</p>
-                    <p class="text-slate-900 font-bold">Cr 4 #10-44, Oficina 608, Edificio Plaza de Caicedo</p>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-xs font-bold tracking-widest uppercase text-orange-600">Ubicación Estratégica</h2>
+                    <h3 class="text-3xl font-extrabold text-slate-900">Te esperamos en el corazón de Cali</h3>
+                    <p class="text-slate-600 text-sm">
+                        Nuestra oficina principal está ubicada en pleno centro histórico, ofreciéndote un punto seguro y de fácil acceso.
+                    </p>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                        <div class="mb-4">
+                            <p class="text-xs font-bold uppercase text-slate-400">Dirección Exacta</p>
+                            <p class="text-slate-900 font-bold text-lg">Cr 4 #10-44</p>
+                            <p class="text-slate-700">Oficina 608, Edificio Plaza de Caicedo</p>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold uppercase text-slate-400">Ciudad</p>
+                            <p class="text-slate-900 font-bold">Cali, Valle del Cauca</p>
+                        </div>
+                    </div>
+                    <a href="#formulario-cita" class="inline-block bg-blue-950 text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-blue-900 transition">
+                        Agendar mi cita aquí
+                    </a>
                 </div>
-                <div class="h-8 w-px bg-slate-200 hidden sm:block"></div>
-                <div>
-                    <p class="text-xs font-bold uppercase text-slate-400">Ciudad</p>
-                    <p class="text-slate-900 font-bold">Cali, Valle del Cauca</p>
+                <div class="relative">
+                    <!-- Uso de la imagen 5 para la ubicación -->
+                    <img src="opecredit5.jpeg" alt="Ubicación Plaza Caicedo" class="rounded-3xl shadow-xl object-cover w-full h-[400px]">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer & Contact CTA -->
-    <footer id="contacto" class="bg-blue-950 text-white py-16 border-t border-blue-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-            <span class="text-2xl font-extrabold tracking-tight text-white">OPE<span class="text-orange-500">CREDIT</span> S.A.S</span>
-            <p class="text-sm text-slate-300 max-w-md mx-auto">
-                Escríbenos ahora mismo para resolver tus dudas y agendar tu visita a la oficina.
+    <!-- Footer & Contact CTA con Fondo de Imagen -->
+    <footer id="contacto" class="relative bg-blue-950 text-white py-20 border-t border-blue-900 overflow-hidden">
+        <!-- Imagen de fondo con opacidad (Uso de opecredi.jpeg) -->
+        <div class="absolute inset-0">
+            <img src="opecredi.jpeg" alt="Fondo Opecredit" class="w-full h-full object-cover opacity-10 mix-blend-overlay">
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
+            <span class="text-3xl font-extrabold tracking-tight text-white">OPE<span class="text-orange-500">CREDIT</span> S.A.S</span>
+            <p class="text-base text-slate-300 max-w-lg mx-auto">
+                ¿Tienes dudas adicionales? Escríbenos ahora mismo para resolverlas y agendar tu visita a la oficina.
             </p>
-            <div>
-                <a href="https://wa.me/573163582022?text=Hola,%20quiero%20más%20información%20sobre%20sus%20créditos%20y%20agendar%20una%20cita." target="_blank" class="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-500 text-white font-bold px-8 py-4 rounded-xl shadow-xl transition transform hover:-translate-y-0.5 text-base">
+            <div class="pt-4">
+                <a href="https://wa.me/573163582022?text=Hola,%20quiero%20más%20información%20sobre%20sus%20créditos%20y%20agendar%20una%20cita." target="_blank" class="inline-flex items-center gap-3 bg-orange-600 hover:bg-orange-500 text-white font-bold px-10 py-5 rounded-2xl shadow-2xl transition transform hover:-translate-y-1 text-lg">
                     💬 Escribir al WhatsApp +57 316 3582022
                 </a>
             </div>
-            <div class="pt-8 text-xs text-slate-500 border-t border-blue-900/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="pt-12 text-xs text-slate-400 flex flex-col sm:flex-row items-center justify-center gap-6">
                 <p>&copy; 2026 Opecredit S.A.S. Todos los derechos reservados.</p>
                 <div class="flex space-x-6">
                     <a href="https://www.instagram.com/opecreditsas/" target="_blank" class="hover:text-white transition">Instagram</a>
