@@ -10,6 +10,24 @@
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
     </style>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1795119231748929');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1795119231748929&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 <body class="bg-slate-50 text-slate-800">
 
@@ -38,93 +56,93 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative pt-12 pb-20 overflow-hidden bg-gradient-to-b from-blue-950 via-blue-900 to-blue-950 text-white">
+    <!-- Hero Section (Diseño de Embudo Vertical con el Video Arriba) -->
+    <section class="relative pt-12 pb-24 overflow-hidden bg-gradient-to-b from-blue-950 via-blue-900 to-blue-950 text-white">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
         
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Columna Izquierda: Texto + Reel -->
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-semibold bg-orange-500/20 text-orange-300 border border-orange-500/30">
-                        ✨ Soluciones financieras ágiles y transparentes
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
+            
+            <!-- REEL DESTACADO CENTRADO Y ARRIBA -->
+            <div class="relative w-full max-w-[280px] sm:max-w-[320px] rounded-3xl overflow-hidden shadow-2xl shadow-orange-600/40 border border-white/20 mb-8 bg-blue-950">
+                <div class="absolute top-3 left-0 right-0 flex justify-center z-10">
+                    <span class="bg-orange-600 text-white text-[11px] sm:text-xs uppercase tracking-wider font-bold px-4 py-1.5 rounded-full shadow-lg">
+                        📍 Así es el proceso en nuestra oficina
                     </span>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-                        Tu crédito aprobado y entregado <span class="text-orange-400">en minutos</span> en Cali
-                    </h1>
-                    <p class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0">
-                        Cierra tu proceso de forma segura en nuestra oficina del <strong>Edificio Plaza de Caicedo</strong> y llévate el desembolso al instante.
-                    </p>
+                </div>
+                <!-- Carga el archivo del reel -->
+                <video src="reel%20ope.mp4" autoplay loop muted playsinline controls class="w-full h-auto object-cover aspect-[9/16]"></video>
+            </div>
 
-                    <!-- REEL DESTACADO -->
-                    <div class="relative w-full max-w-[280px] mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-2xl shadow-orange-600/30 border border-white/20 mt-6 bg-blue-950">
-                        <div class="absolute top-3 left-0 right-0 flex justify-center z-10">
-                            <span class="bg-orange-600 text-white text-[11px] uppercase tracking-wider font-bold px-4 py-1.5 rounded-full shadow-lg">
-                                📍 Así es el proceso en nuestra oficina
-                            </span>
+            <!-- TÍTULOS Y PROPUESTA DE VALOR -->
+            <span class="inline-flex items-center gap-1.5 py-1.5 px-4 rounded-full text-xs font-semibold bg-orange-500/20 text-orange-300 border border-orange-500/30 mb-5">
+                ✨ Soluciones financieras ágiles y transparentes
+            </span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                Tu crédito aprobado y entregado <span class="text-orange-400">en minutos</span> en Cali
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10">
+                Cierra tu proceso de forma segura en nuestra oficina del <strong>Edificio Plaza de Caicedo</strong> y llévate el desembolso al instante.
+            </p>
+
+            <!-- FORMULARIO DE AGENDAMIENTO DEBAJO DEL TEXTO -->
+            <div id="formulario-cita" class="w-full max-w-lg bg-white text-slate-900 p-8 sm:p-10 rounded-3xl shadow-2xl border border-slate-100 text-left relative mt-4">
+                
+                <!-- Decoración visual -->
+                <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-blue-950 text-white px-6 py-2 rounded-full font-bold shadow-lg border-4 border-slate-50 text-sm w-max">
+                    Paso 1: Aparta tu cupo aquí 👇
+                </div>
+
+                <h3 class="text-2xl font-bold text-slate-900 mb-2 mt-2">Reserva tu Cita</h3>
+                <p class="text-sm text-slate-600 mb-6">Selecciona el servicio, fecha y hora exacta para asegurar tu atención en oficina sin esperas ni cruces.</p>
+                
+                <form id="citaForm" class="space-y-5" onsubmit="enviarCitaWhatsApp(event)">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Nombre Completo</label>
+                        <input type="text" id="nombre" required class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:outline-none text-sm bg-slate-50" placeholder="Ej. Carlos Pérez">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Servicio de Interés</label>
+                        <select id="servicio" required class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:outline-none text-sm bg-slate-50">
+                            <option value="">Selecciona un servicio...</option>
+                            <option value="Crédito de Libranza">Crédito de Libranza</option>
+                            <option value="Compra de Cartera">Compra de Cartera</option>
+                            <option value="Libre Inversión">Libre Inversión</option>
+                            <option value="Bancarización">Bancarización</option>
+                            <option value="Crédito Hipotecario">Crédito Hipotecario</option>
+                            <option value="Crédito Brilla">Crédito Brilla</option>
+                        </select>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Fecha</label>
+                            <input type="date" id="fecha" required class="w-full px-3 py-3.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:outline-none text-sm bg-slate-50">
                         </div>
-                        <!-- Carga el archivo del reel -->
-                        <video src="reel%20ope.mp4" autoplay loop muted playsinline controls class="w-full h-auto object-cover aspect-[9/16]"></video>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Hora</label>
+                            <select id="hora" required class="w-full px-3 py-3.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:outline-none text-sm bg-slate-50">
+                                <option value="">Hora...</option>
+                                <option value="09:00 AM">09:00 AM</option>
+                                <option value="10:00 AM">10:00 AM</option>
+                                <option value="11:00 AM">11:00 AM</option>
+                                <option value="02:00 PM">02:00 PM</option>
+                                <option value="03:00 PM">03:00 PM</option>
+                                <option value="04:00 PM">04:00 PM</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Columna Derecha: Card Form / Agenda Anti-Cruce -->
-                <div id="formulario-cita" class="lg:col-span-5">
-                    <div class="bg-white text-slate-900 p-8 rounded-3xl shadow-2xl border border-slate-100">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Aparta tu Cita</h3>
-                        <p class="text-sm text-slate-600 mb-6">Selecciona el servicio, fecha y hora exacta para asegurar tu atención en oficina sin esperas ni cruces.</p>
-                        
-                        <form id="citaForm" class="space-y-4" onsubmit="enviarCitaWhatsApp(event)">
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Nombre Completo</label>
-                                <input type="text" id="nombre" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:outline-none text-sm" placeholder="Ej. Carlos Pérez">
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Servicio de Interés</label>
-                                <select id="servicio" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:outline-none text-sm bg-white">
-                                    <option value="">Selecciona un servicio...</option>
-                                    <option value="Crédito de Libranza">Crédito de Libranza</option>
-                                    <option value="Compra de Cartera">Compra de Cartera</option>
-                                    <option value="Libre Inversión">Libre Inversión</option>
-                                    <option value="Bancarización">Bancarización</option>
-                                    <option value="Crédito Hipotecario">Crédito Hipotecario</option>
-                                    <option value="Crédito Brilla">Crédito Brilla</option>
-                                </select>
-                            </div>
-
-                            <div class="grid grid-cols-2 gap-3">
-                                <div>
-                                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Fecha</label>
-                                    <input type="date" id="fecha" required class="w-full px-3 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:outline-none text-sm bg-white">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Hora</label>
-                                    <select id="hora" required class="w-full px-3 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:outline-none text-sm bg-white">
-                                        <option value="">Hora...</option>
-                                        <option value="09:00 AM">09:00 AM</option>
-                                        <option value="10:00 AM">10:00 AM</option>
-                                        <option value="11:00 AM">11:00 AM</option>
-                                        <option value="02:00 PM">02:00 PM</option>
-                                        <option value="03:00 PM">03:00 PM</option>
-                                        <option value="04:00 PM">04:00 PM</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Número de WhatsApp</label>
-                                <input type="tel" id="telefono" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:outline-none text-sm" placeholder="Ej. 316 3582022">
-                            </div>
-
-                            <button type="submit" class="w-full bg-orange-600 hover:bg-orange-500 text-white font-bold py-3.5 rounded-xl transition shadow-lg shadow-orange-600/20 text-sm">
-                                📅 Confirmar Cita por WhatsApp
-                            </button>
-                            <p class="text-[11px] text-center text-slate-500 mt-2">🔒 Tus datos están seguros. Oficina 608 - Ed. Plaza de Caicedo.</p>
-                        </form>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Número de WhatsApp</label>
+                        <input type="tel" id="telefono" required class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:outline-none text-sm bg-slate-50" placeholder="Ej. 316 3582022">
                     </div>
-                </div>
+
+                    <button type="submit" class="w-full bg-orange-600 hover:bg-orange-500 text-white font-bold py-4 rounded-xl transition shadow-xl shadow-orange-600/20 text-[15px] transform hover:-translate-y-0.5">
+                        📅 Confirmar Cita por WhatsApp
+                    </button>
+                    <p class="text-[11px] text-center text-slate-500 mt-2 font-medium">🔒 Tus datos están seguros. Oficina 608 - Ed. Plaza de Caicedo.</p>
+                </form>
             </div>
         </div>
     </section>
@@ -208,7 +226,6 @@
                     </div>
                 </div>
                 <div class="relative">
-                    <!-- Uso de la primera imagen -->
                     <img src="opecredit.jpeg" alt="Proceso Opecredit" class="rounded-3xl shadow-2xl object-cover w-full h-[500px]">
                 </div>
             </div>
@@ -220,7 +237,6 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="relative order-2 lg:order-1">
-                    <!-- Uso de la segunda imagen -->
                     <img src="opecredit2.jpeg" alt="Seguridad y Confianza" class="rounded-3xl shadow-2xl object-cover w-full h-[450px]">
                 </div>
                 <div class="space-y-6 order-1 lg:order-2">
@@ -259,7 +275,6 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Testimonio Texto -->
                 <div class="bg-white p-6 rounded-3xl border border-slate-200 flex flex-col justify-between shadow-sm">
                     <p class="text-slate-600 text-sm italic mb-6">"Me ayudaron con una compra de cartera excelente. Fui a la oficina 608 en el Edificio Plaza de Caicedo y todo fue muy rápido."</p>
                     <div>
@@ -268,10 +283,8 @@
                     </div>
                 </div>
 
-                <!-- Testimonio Video -->
                 <div class="bg-white p-4 rounded-3xl border border-slate-200 flex flex-col items-center shadow-lg transform scale-105 z-10 relative">
                     <div class="absolute -top-3 right-4 bg-orange-600 text-white text-[10px] font-bold px-2 py-1 rounded-md">CASO REAL</div>
-                    <!-- Carga el archivo de testimonio -->
                     <video src="testimonio%20opecredit.mp4" controls playsinline class="w-full rounded-2xl h-[220px] object-cover bg-slate-100"></video>
                     <div class="w-full text-left mt-4 px-2">
                         <h5 class="font-bold text-slate-900 text-sm">Cliente Satisfecho</h5>
@@ -279,7 +292,6 @@
                     </div>
                 </div>
 
-                <!-- Testimonio Texto -->
                 <div class="bg-white p-6 rounded-3xl border border-slate-200 flex flex-col justify-between shadow-sm">
                     <p class="text-slate-600 text-sm italic mb-6">"Rápido y sin rodeos. Pregunté por libre inversión y el desembolso se hizo directamente en la oficina tal como lo prometen."</p>
                     <div>
@@ -317,7 +329,6 @@
                     </a>
                 </div>
                 <div class="relative">
-                    <!-- Uso de la imagen 5 para la ubicación -->
                     <img src="opecredit5.jpeg" alt="Ubicación Plaza Caicedo" class="rounded-3xl shadow-xl object-cover w-full h-[400px]">
                 </div>
             </div>
@@ -326,7 +337,6 @@
 
     <!-- Footer & Contact CTA con Fondo de Imagen -->
     <footer id="contacto" class="relative bg-blue-950 text-white py-20 border-t border-blue-900 overflow-hidden">
-        <!-- Imagen de fondo con opacidad (Uso de opecredi.jpeg) -->
         <div class="absolute inset-0">
             <img src="opecredi.jpeg" alt="Fondo Opecredit" class="w-full h-full object-cover opacity-10 mix-blend-overlay">
         </div>
@@ -351,7 +361,7 @@
         </div>
     </footer>
 
-    <!-- Script de Agenda anti-cruce y WhatsApp -->
+    <!-- Script de Agenda anti-cruce, Pixel de Meta y WhatsApp -->
     <script>
         // Establecer fecha mínima como el día actual
         const today = new Date().toISOString().split('T')[0];
@@ -366,12 +376,17 @@
             const hora = document.getElementById('hora').value;
             const telefonoUsuario = document.getElementById('telefono').value;
             
+            // 1. Disparar evento de Meta Pixel para marcar la conversión
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead');
+                fbq('track', 'Schedule');
+            }
+
+            // 2. Armar el mensaje y enviar a WhatsApp
             const telefonoOficina = "573163582022";
-            
             const mensaje = `Hola, quiero apartar una cita en la oficina:\n\n*Nombre:* ${nombre}\n*Servicio:* ${servicio}\n*Fecha:* ${fecha}\n*Hora:* ${hora}\n*Teléfono:* ${telefonoUsuario}\n\nQuedo atento a la confirmación de disponibilidad.`;
             
             const url = `https://wa.me/${telefonoOficina}?text=${encodeURIComponent(mensaje)}`;
-            
             window.open(url, '_blank');
         }
     </script>
